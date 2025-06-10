@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Yamaha Webshop – Home</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header>
+      <img src="images/logo.png" alt="Logo" class="logo" />
+    <nav class="nav-center">
+      <a href="index.html">Home</a>
+      <a href="products.html">Products</a>
+      <a href="about.html">About Us</a>
+    </nav>
+    <div class="header-right">
+      <a href="#newsletter"><img src="images/bell.svg" alt="Notifications" class="icon" /></a>
+      <a href="cart.html"><img src="images/cart.svg" alt="Cart" class="icon" /></a>
+    </div>
+  </header>
+  <section class="slideshow">
+    <div class="slide">
+      <img src="images/bikes.png" alt="Category Bikes" />
+      <a class="SeeMore" href="products.html#bikes">See More</a>
+    </div>
+    <div class="slide">
+      <img src="images/SpareParts.png" alt="Category Spare Parts" />
+      <a class="SeeMore" href="products.html#spareparts">See More</a>
+    </div>
+  </section>
+  <section class="new_products" id="new-products">
+   <h2>Hot Products</h2>
+   <div class="new_products-grid">
+    <div class="new_products-card">
+      <img src="images/spareparts.jpg" alt="Yamaha MT-125"/>
+      <h3>Yamaha MT-125</h3>
+    </div>
+    <div class="new_products-card">
+      <img src="images/motorcycles.jpg" alt="Yamaha MT-07"/>
+      <h3>Yamaha MT-07</h3>
+    </div>
+    <div class="new_products-card">
+      <img src="images/product3.jpg" alt="Yamaha R15"/>
+      <h3>Yamaha R125</h3>
+    </div>
+    <div class="new_products-card">
+      <img src="images/product4.jpg" alt="Yamaha XSR700"/>
+      <h3>Yamaha XSR700</h3>
+    </div>
+    </div>
+   <a href="products.html" class="see-more-btn">See More</a>
+  </section>
+  <section class="newsletter" id="newsletter">
+    <h2>Subscribe to Newsletter</h2>
+    <form>
+      <input type="text" name="name" placeholder="Your Name" required />
+      <input type="email" name="email" placeholder="Your Email" required />
+      <button type="submit">Subscribe</button>
+    </form>
+  </section>
+  <footer>
+    <div class="footer-links">
+      <a href="contact.html">Contact</a>
+      <a href="imprint.html">Imprint</a>
+      <a href="#">© 2025</a>
+      <a href="products.html">Products</a>
+      <a href="about.html">About</a>
+    </div>
+  </footer>
+</body>
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+    const slides = document.querySelectorAll('.slide');
+    let currentSlide = 0;
+    slides[currentSlide].classList.add('active');
+    setInterval(() => {
+      slides[currentSlide].classList.remove('active');
+      currentSlide = (currentSlide + 1) % slides.length;
+      slides[currentSlide].classList.add('active');
+    }, 5000);
+  });
+</script>
+</html>
