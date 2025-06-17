@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Products</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header>
+  <img src="images/logo.png" alt="Logo" class="logo" />
+  <div class="header-right">
+    <a href="#newsletter"><img src="images/bell.svg" alt="Notifications" class="icon" /></a>
+    <a href="cart.html"><img src="images/cart.svg" alt="Cart" class="icon" /></a>
+  </div>  
+  <button class="burger-menu" aria-label="Menü öffnen">
+    <span></span>
+    <span></span>
+    <span></span>
+  </button>
+  <nav class="nav-center">
+    <a href="index.html">Home</a>
+    <a href="products.html">Products</a>
+    <a href="about.html">About Us</a>
+  </nav>
+</header>
+  <main>
+  <section class="products-header-section">
+    <div class="products-header-container">
+      <div class="hero" aria-labelledby="main-title">
+        <hr class="line" />
+        <h1 id="main-title">Products</h1>
+        <hr class="line" />
+      </div>
+      <div class="filters-section">
+        <div class="filters-container">
+          <div class="filter-group">
+            <label for="category-filter">Category:</label>
+            <select id="category-filter" class="filter-select">
+              <option value="all">All Products</option>
+              <option value="spare">Spare Parts</option>
+              <option value="new">New Motorcycles</option>
+              <option value="used">Used Motorcycles</option>
+            </select>
+          </div>
+          <div class="filter-group">
+            <label for="sort-filter">Sort by:</label>
+            <select id="sort-filter" class="filter-select">
+              <option value="default">Default</option>
+              <option value="price-asc">Price: Low to High</option>
+              <option value="price-desc">Price: High to Low</option>
+              <option value="name-asc">Name: A-Z</option>
+              <option value="name-desc">Name: Z-A</option>
+              <option value="year-new">Year: Newest</option>
+              <option value="year-old">Year: Oldest</option>
+            </select>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section id="card-container" aria-label="Product Cards"></section>
+</main>
+  <footer>
+    <nav class="footer-links" aria-label="Footer Navigation">
+      <a href="contact.html">Contact</a>
+      <a href="imprint.html">Imprint</a>
+      <a href="#">© 2025</a>
+      <a href="products.html">Products</a>
+      <a href="about.html">About</a>
+    </nav>
+  </footer>
+  <script src="script.js"></script>
+</body>
+</html>
