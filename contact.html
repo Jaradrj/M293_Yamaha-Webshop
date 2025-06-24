@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>About Us</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header>
+    <img src="images/logo.png" alt="Logo" class="logo" />
+    <div class="header-right">
+      <a href="#newsletter"><img src="images/bell.svg" alt="Notifications" class="icon" /></a>
+      <a href="cart.html"><img src="images/cart.svg" alt="Cart" class="icon" /></a>
+    </div>
+    <button class="burger-menu" aria-label="Menü öffnen">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+    <nav class="nav-center">
+      <a href="index.html">Home</a>
+      <a href="products.html">Products</a>
+      <a href="contact.html">About Us</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="about-section">
+      <h1 class="about-title">About Us</h1>
+      <div class="divider"></div>
+
+      <div class="team-section">
+        <div class="team-member"><img src="images/jara.png" alt="Jara de Rooij" /></div>
+        <div class="team-member"><img src="images/sylia.png" alt="Sylia Scandinaro" /></div>
+        <div class="team-member"><img src="images/zhenya.png" alt="Zhenya Shylovich" /></div>
+        <div class="team-member"><img src="images/lisa.png" alt="Lisa Meergans" /></div>
+      </div>
+
+      <p class="about-description">
+        We are passionate about motorcycles and spare parts. Our goal is to deliver high quality products and excellent service to all motorcycle enthusiasts.
+      </p>
+
+      <form class="contact-form">
+        <h2>Contact Us</h2>
+        <div class="form-grid">
+          <div class="form-group">
+            <label for="name">Name</label>
+            <input type="text" id="name" name="name" required />
+          </div>
+          <div class="form-group">
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" required />
+          </div>
+          <div class="form-group full">
+            <label for="message">Message</label>
+            <textarea id="message" name="message" rows="5" required></textarea>
+          </div>
+        </div>
+        <button type="submit" class="submit-button">Send Message</button>
+      </form>
+    </section>
+  </main>
+
+  <footer>
+    <nav class="footer-links" aria-label="Footer Navigation">
+      <a href="contact.html">Contact</a>
+      <a href="imprint.html">Imprint</a>
+      <a href="#">© 2025</a>
+      <a href="products.html">Products</a>
+      <a href="contact.html">About</a>
+    </nav>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
