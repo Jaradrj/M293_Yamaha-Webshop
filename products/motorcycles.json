@@ -1,8 +1,9 @@
 [
   {
+    "id": "m1",
     "brand": "Yamaha",
     "name": "MT-07",
-    "year": 2020,
+    "year": 2021,
     "hp": 74,
     "weight": 184,
     "torque": "68 Nm",
@@ -11,9 +12,11 @@
     "displacement": 689,
     "image": "images/mt07.png",
     "sound": "audio/mt07.mp3",
-    "price": 6500
+    "price": 6500,
+    "category": "used"
   },
   {
+    "id": "m2",
     "brand": "Yamaha",
     "name": "MT-09",
     "year": 2020,
@@ -24,9 +27,11 @@
     "displacement": 890,
     "image": "images/mt09.png",
     "sound": "audio/mt09.mp3",
-    "price": 9500
+    "price": 9500,
+    "category": "used"
   },
   {
+    "id": "m3",
     "brand": "Yamaha",
     "name": "R1",
     "year": 2023,
@@ -37,12 +42,14 @@
     "displacement": 998,
     "image": "images/r1.png",
     "sound": "audio/r1.mp3",
-    "price": 18000
+    "price": 18000,
+    "category": "new"
   },
   {
+    "id": "m4",
     "brand": "Yamaha",
     "name": "MT-125",
-    "year": 2019,
+    "year": 2021,
     "hp": 15,
     "weight": 140,
     "torque": "11.5 Nm",
@@ -50,9 +57,11 @@
     "displacement": 124,
     "image": "images/mt125.png",
     "sound": "audio/mt125.mp3",
-    "price": 3500
+    "price": 3500,
+    "category": "used"
   },
   {
+    "id": "m5",
     "brand": "Yamaha",
     "name": "DT125",
     "year": 1991,
@@ -63,9 +72,11 @@
     "displacement": 124,
     "image": "images/dt125.png",
     "sound": "audio/dt125.mp3",
-    "price": 2900
+    "price": 2900,
+    "category": "used"
   },
   {
+    "id": "m6",
     "brand": "Yamaha",
     "name": "R7",
     "year": 2025,
@@ -76,9 +87,11 @@
     "displacement": 689,
     "image": "images/r7.png",
     "sound": "audio/r7.mp3",
-    "price": 10249
+    "price": 10249,
+    "category": "new"
   },
   {
+    "id": "m7",
     "brand": "Yamaha",
     "name": "MT-10 SP",
     "year": 2025,
@@ -89,9 +102,11 @@
     "displacement": 998,
     "image": "images/mt10sp.png",
     "sound": "audio/mt10sp.mp3",
-    "price": 19449
+    "price": 19449,
+    "category": "new"
   },
   {
+    "id": "m8",
     "brand": "Yamaha",
     "name": "Tracer 7",
     "year": 2025,
@@ -102,9 +117,11 @@
     "displacement": 689,
     "image": "images/tracer7.png",
     "sound": "audio/tracer7.mp3",
-    "price": 9990
+    "price": 9990,
+    "category": "new"
   },
   {
+    "id": "m9",
     "brand": "Yamaha",
     "name": "R125",
     "year": 2025,
@@ -115,9 +132,11 @@
     "displacement": 124,
     "image": "images/r125.png",
     "sound": "audio/r125.mp3",
-    "price": 6190
+    "price": 6190,
+    "category": "new"
   },
   {
+    "id": "m10",
     "brand": "Yamaha",
     "name": "VMAX",
     "year": 2008,
@@ -128,9 +147,11 @@
     "displacement": 1679,
     "image": "images/vmax.png",
     "sound": "audio/vmax.mp3",
-    "price": 1800
+    "price": 1800,
+    "category": "used"
   },
   {
+    "id": "m11",
     "brand": "Yamaha",
     "name": "XSR700",
     "year": 2025,
@@ -141,6 +162,38 @@
     "displacement": 689,
     "image": "images/xsr.png",
     "sound": "audio/xsr.mp3",
-    "price": 6990
+    "price": 6990,
+    "category": "new"
+  },
+  {
+    "id": "m12",
+    "brand": "Yamaha",
+    "name": "MT-125",
+    "year": 2019,
+    "hp": 15,
+    "weight": 140,
+    "torque": "11.5 Nm",
+    "seatHeight": 810,
+    "displacement": 124,
+    "image": "images/mt125Used.png",
+    "sound": "audio/mt125Used.mp3",
+    "price": 3000,
+    "category": "used"
+  },
+  {
+    "id": "m13",
+    "brand": "Yamaha",
+    "name": "MT-07",
+    "year": 2020,
+    "hp": 74,
+    "weight": 184,
+    "torque": "68 Nm",
+    "seatHeight": 805,
+    "engine": "2-Zylinder-Reihenmotor",
+    "displacement": 689,
+    "image": "images/mt07Used.png",
+    "sound": "audio/mt07Used.mp3",
+    "price": 5000,
+    "category": "used"
   }
 ]

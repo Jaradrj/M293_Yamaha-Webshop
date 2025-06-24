@@ -1,0 +1,37 @@
+[
+  {
+    "id": "sp1",
+    "name": "Tinted Windshield",
+    "image": "images/windshield.png",
+    "price": 129.99,
+    "category": "spare"
+  },
+  {
+    "id": "sp2",
+    "name": "Short License Plate Holder",
+    "image": "images/plateholder.png",
+    "price": 89.5,
+    "category": "spare"
+  },
+  {
+    "id": "sp3",
+    "name": "Heatable Grips",
+    "image": "images/heatables.png",
+    "price": 99.0,
+    "category": "spare"
+  },
+  {
+    "id": "sp4",
+    "name": "Akrapovic Full Exhaust System",
+    "image": "images/exhaust.png",
+    "price": 899.0,
+    "category": "spare"
+  },
+  {
+    "id": "sp5",
+    "name": "Comfort Seat",
+    "image": "images/comfortseat.png",
+    "price": 249.9,
+    "category": "spare"
+  }
+]
