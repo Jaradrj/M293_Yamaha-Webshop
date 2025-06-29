@@ -52,12 +52,24 @@
             <input type="email" id="email" name="email" required />
           </div>
           <div class="form-group full">
+            <label for="subject">Subject</label>
+            <select id="subject" name="subject" required>
+              <option value="" disabled selected>Select a subject</option>
+              <option value="general">General Inquiry</option>
+              <option value="order">Order Question</option>
+              <option value="feedback">Feedback</option>
+              <option value="support">Technical Support</option>
+              <option value="partnership">Partnership</option>
+            </select>
+          </div>
+          <div class="form-group full">
             <label for="message">Message</label>
             <textarea id="message" name="message" rows="5" required></textarea>
           </div>
         </div>
         <button type="submit" class="submit-button">Send Message</button>
       </form>
+
     </section>
   </main>
 
