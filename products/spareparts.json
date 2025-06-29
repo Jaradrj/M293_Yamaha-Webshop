@@ -4,34 +4,39 @@
     "name": "Tinted Windshield",
     "image": "images/windshield.png",
     "price": 129.99,
-    "category": "spare"
+    "category": "spare",
+    "description": "A sleek tinted windshield that reduces wind resistance and adds sporty style to your bike."
   },
   {
     "id": "sp2",
     "name": "Short License Plate Holder",
     "image": "images/plateholder.png",
     "price": 89.5,
-    "category": "spare"
+    "category": "spare",
+    "description": "Compact and durable license plate holder designed to enhance the rear aesthetics."
   },
   {
     "id": "sp3",
     "name": "Heatable Grips",
     "image": "images/heatables.png",
     "price": 99.0,
-    "category": "spare"
+    "category": "spare",
+    "description": "Keep your hands warm during cold rides with these easy-to-install heatable grips."
   },
   {
     "id": "sp4",
     "name": "Akrapovic Full Exhaust System",
     "image": "images/exhaust.png",
     "price": 899.0,
-    "category": "spare"
+    "category": "spare",
+    "description": "High-performance exhaust system delivering superior sound and enhanced engine output."
   },
   {
     "id": "sp5",
     "name": "Comfort Seat",
     "image": "images/comfortseat.png",
     "price": 249.9,
-    "category": "spare"
+    "category": "spare",
+    "description": "Ergonomically designed comfort seat for longer rides with improved cushioning."
   }
 ]

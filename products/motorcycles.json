@@ -13,7 +13,8 @@
     "image": "images/mt07.png",
     "sound": "audio/mt07.mp3",
     "price": 6500,
-    "category": "used"
+    "category": "used",
+    "description": "A versatile and punchy naked bike, perfect for both beginners and experienced riders looking for a fun ride."
   },
   {
     "id": "m2",
@@ -28,7 +29,8 @@
     "image": "images/mt09.png",
     "sound": "audio/mt09.mp3",
     "price": 9500,
-    "category": "used"
+    "category": "used",
+    "description": "High-performance naked bike with aggressive styling and powerful triple-cylinder engine."
   },
   {
     "id": "m3",
@@ -43,7 +45,8 @@
     "image": "images/r1.png",
     "sound": "audio/r1.mp3",
     "price": 18000,
-    "category": "new"
+    "category": "new",
+    "description": "Yamaha's flagship supersport with race-proven performance and cutting-edge electronics."
   },
   {
     "id": "m4",
@@ -58,7 +61,8 @@
     "image": "images/mt125.png",
     "sound": "audio/mt125.mp3",
     "price": 3500,
-    "category": "used"
+    "category": "used",
+    "description": "A learner-friendly lightweight bike with modern design and efficient engine performance."
   },
   {
     "id": "m5",
@@ -73,7 +77,8 @@
     "image": "images/dt125.png",
     "sound": "audio/dt125.mp3",
     "price": 2900,
-    "category": "used"
+    "category": "used",
+    "description": "Classic 2-stroke dual-sport bike with strong off-road capability and vintage charm."
   },
   {
     "id": "m6",
@@ -88,7 +93,8 @@
     "image": "images/r7.png",
     "sound": "audio/r7.mp3",
     "price": 10249,
-    "category": "new"
+    "category": "new",
+    "description": "A lightweight supersport that combines agility, control, and everyday usability."
   },
   {
     "id": "m7",
@@ -103,7 +109,8 @@
     "image": "images/mt10sp.png",
     "sound": "audio/mt10sp.mp3",
     "price": 19449,
-    "category": "new"
+    "category": "new",
+    "description": "Top-tier hyper naked bike featuring advanced Öhlins suspension and electronics package."
   },
   {
     "id": "m8",
@@ -118,7 +125,8 @@
     "image": "images/tracer7.png",
     "sound": "audio/tracer7.mp3",
     "price": 9990,
-    "category": "new"
+    "category": "new",
+    "description": "A sporty touring motorcycle with comfort, efficiency, and the agility of the MT-07 platform."
   },
   {
     "id": "m9",
@@ -133,7 +141,8 @@
     "image": "images/r125.png",
     "sound": "audio/r125.mp3",
     "price": 6190,
-    "category": "new"
+    "category": "new",
+    "description": "A premium entry-level sportbike inspired by the R-series design with refined handling."
   },
   {
     "id": "m10",
@@ -148,7 +157,8 @@
     "image": "images/vmax.png",
     "sound": "audio/vmax.mp3",
     "price": 1800,
-    "category": "used"
+    "category": "used",
+    "description": "Legendary muscle cruiser with raw power, aggressive styling, and massive V4 performance."
   },
   {
     "id": "m11",
@@ -163,7 +173,8 @@
     "image": "images/xsr.png",
     "sound": "audio/xsr.mp3",
     "price": 6990,
-    "category": "new"
+    "category": "new",
+    "description": "Retro-inspired design meets modern performance in this versatile middleweight bike."
   },
   {
     "id": "m12",
@@ -178,7 +189,8 @@
     "image": "images/mt125Used.png",
     "sound": "audio/mt125Used.mp3",
     "price": 3000,
-    "category": "used"
+    "category": "used",
+    "description": "Used MT-125 in great condition, equipped with aftermarket exhaust, bar-end mirrors, and tail tidy kit."
   },
   {
     "id": "m13",
@@ -194,6 +206,7 @@
     "image": "images/mt07Used.png",
     "sound": "audio/mt07Used.mp3",
     "price": 5000,
-    "category": "used"
+    "category": "used",
+    "description": "Pre-owned MT-07 with excellent maintenance history, comes with Arrow exhaust, end-bar-mirros, and foliation."
   }
 ]
