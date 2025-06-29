@@ -187,3 +187,20 @@ document.addEventListener('DOMContentLoaded', () => {
   `;
   }
 });
+
+function renderHotProducts() {
+  const container = document.querySelector('.new_products-grid');
+  const hotProducts = motorcycles.slice(0, 4); 
+
+  container.innerHTML = '';
+  hotProducts.forEach(product => {
+    const card = document.createElement('div');
+    card.className = 'new_products-card';
+    card.onclick = () => location.href = `product.html?id=${product.id}`;
+    card.innerHTML = `
+      <img src="${product.image}" alt="${product.name}" />
+      <h3>${product.name}</h3>
+    `;
+    container.appendChild(card);
+  });
+}
