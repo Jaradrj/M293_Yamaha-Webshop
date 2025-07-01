@@ -202,7 +202,7 @@ function renderProduct(product) {
                 </button>
                 <audio id="product-audio" src="${product.sound}"></audio>`
               : ''}
-            <a href="cart.html" class="see-more-btn" style="margin-top: 1rem; display: inline-block;">In den Warenkorb</a>
+            <a href="cart.html" class="see-more-btn" style="margin-top: 1rem; display: inline-block;">Add to cart</a>
           </div>
         </div>
       </div>

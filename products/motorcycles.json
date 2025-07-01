@@ -33,22 +33,6 @@
     "description": "High-performance naked bike with aggressive styling and powerful triple-cylinder engine."
   },
   {
-    "id": "m3",
-    "brand": "Yamaha",
-    "name": "R1",
-    "year": 2023,
-    "hp": 200,
-    "weight": 200,
-    "torque": "113 Nm",
-    "seatHeight": 855,
-    "displacement": 998,
-    "image": "images/r1.png",
-    "sound": "audio/r1.mp3",
-    "price": 18000,
-    "category": "new",
-    "description": "Yamaha's flagship supersport with race-proven performance and cutting-edge electronics."
-  },
-  {
     "id": "m4",
     "brand": "Yamaha",
     "name": "MT-125",
@@ -63,22 +47,6 @@
     "price": 3500,
     "category": "used",
     "description": "A learner-friendly lightweight bike with modern design and efficient engine performance."
-  },
-  {
-    "id": "m5",
-    "brand": "Yamaha",
-    "name": "DT125",
-    "year": 1991,
-    "hp": 23,
-    "weight": 118,
-    "torque": "18 Nm",
-    "seatHeight": 860,
-    "displacement": 124,
-    "image": "images/dt125.png",
-    "sound": "audio/dt125.mp3",
-    "price": 2900,
-    "category": "used",
-    "description": "Classic 2-stroke dual-sport bike with strong off-road capability and vintage charm."
   },
   {
     "id": "m6",
@@ -175,38 +143,5 @@
     "price": 6990,
     "category": "new",
     "description": "Retro-inspired design meets modern performance in this versatile middleweight bike."
-  },
-  {
-    "id": "m12",
-    "brand": "Yamaha",
-    "name": "MT-125",
-    "year": 2019,
-    "hp": 15,
-    "weight": 140,
-    "torque": "11.5 Nm",
-    "seatHeight": 810,
-    "displacement": 124,
-    "image": "images/mt125Used.png",
-    "sound": "audio/mt125Used.mp3",
-    "price": 3000,
-    "category": "used",
-    "description": "Used MT-125 in great condition, equipped with aftermarket exhaust, bar-end mirrors, and tail tidy kit."
-  },
-  {
-    "id": "m13",
-    "brand": "Yamaha",
-    "name": "MT-07",
-    "year": 2020,
-    "hp": 74,
-    "weight": 184,
-    "torque": "68 Nm",
-    "seatHeight": 805,
-    "engine": "2-Zylinder-Reihenmotor",
-    "displacement": 689,
-    "image": "images/mt07Used.png",
-    "sound": "audio/mt07Used.mp3",
-    "price": 5000,
-    "category": "used",
-    "description": "Pre-owned MT-07 with excellent maintenance history, comes with Arrow exhaust, end-bar-mirros, and foliation."
   }
 ]
