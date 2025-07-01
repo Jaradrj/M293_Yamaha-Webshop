@@ -1,7 +1,7 @@
 let motorcycles = [];
 let flippedCards = new Set();
-let cartItems = [];     
-let wishlistItems = [];
+let cartItems = JSON.parse(localStorage.getItem('cartItems')) || [];     
+let wishlistItems = JSON.parse(localStorage.getItem('wishlistItems')) || [];
 
 document.addEventListener('DOMContentLoaded', function () {
   const slides = document.querySelectorAll('.slide');
@@ -202,7 +202,7 @@ function renderProduct(product) {
                 </button>
                 <audio id="product-audio" src="${product.sound}"></audio>`
               : ''}
-            <a href="cart.html" class="see-more-btn" style="margin-top: 1rem; display: inline-block;">Add to cart</a>
+            <a href="cart.html" class="see-more-btn" style="margin-top: 1rem; display: inline-block;">Add to Cart</a>
           </div>
         </div>
       </div>
@@ -237,4 +237,77 @@ function renderProduct(product) {
       audioEl.play();
     });
   }
+
+ document.querySelectorAll('.wishlist-heart').forEach(heart => {
+    heart.addEventListener('click', function (event) {
+      event.stopPropagation();
+      const productId = this.getAttribute('data-id');
+      toggleWishlistItem(productId);
+    });
+  });
+
+  document.querySelectorAll('.add-to-cart').forEach(button => {
+    button.addEventListener('click', function() {
+      const productId = this.getAttribute('data-id');
+      addToCart(productId);
+    });
+  });
+}
+
+function saveCart() {
+  localStorage.setItem('cartItems', JSON.stringify(cartItems));
+}
+
+function saveWishlist() {
+  localStorage.setItem('wishlistItems', JSON.stringify(wishlistItems));
+}
+
+function toggleWishlistItem(productId) {
+  const index = wishlistItems.indexOf(productId);
+  if (index === -1) {
+    wishlistItems.push(productId);
+  } else {
+    wishlistItems.splice(index, 1);
+  }
+  saveWishlist();
+  updateWishlistHearts();
+}
+
+function updateWishlistHearts() {
+  document.querySelectorAll('.wishlist-heart').forEach(heart => {
+    const productId = heart.getAttribute('data-id');
+    heart.classList.toggle('active', wishlistItems.includes(productId));
+  });
+}
+
+function addToCart(productId) {
+  const product = motorcycles.find(p => p.id.toString() === productId.toString());
+  if (!product) return;
+
+  const existingItem = cartItems.find(item => item.id === productId);
+  if (existingItem) {
+    existingItem.quantity += 1;
+  } else {
+    cartItems.push({
+      ...product,
+      quantity: 1
+    });
+  }
+
+  saveCart();
+  updateCartCount();
+}
+
+function updateCartCount() {
+  const totalItems = cartItems.reduce((sum, item) => sum + item.quantity, 0);
+  const cartCounts = document.querySelectorAll('.cart-count');
+  
+  cartCounts.forEach(count => {
+    if (totalItems > 0) {
+      count.textContent = totalItems;
+      count.style.display = 'inline-block';
+    } else {
+      count.style.display = 'none';
+    }
+  });
 }
