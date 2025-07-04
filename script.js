@@ -18,8 +18,6 @@ document.addEventListener('DOMContentLoaded', function () {
 
 document.addEventListener('DOMContentLoaded', () => {
   const isIndex = location.pathname.endsWith('index.html') || location.pathname === '/';
-  cartItems = JSON.parse(localStorage.getItem('cartItems'));
-  wishlistItems = JSON.parse(localStorage.getItem('wishlistItems'));
 
   Promise.all([
     fetch('products/motorcycles.json').then(res => res.json()),
@@ -29,9 +27,11 @@ document.addEventListener('DOMContentLoaded', () => {
       motorcycles = [...motorcyclesData, ...sparepartsData];
       if (isIndex) {
         renderHotProducts();
-      } else {
+      } else if (location.pathname.endsWith('products.html')) {
         renderCards();
-      }
+      } else if (location.pathname.endsWith('cart.html')) {
+        renderWishlist(); 
+  }
     })
     .catch(err => console.error('Fetch error:', err));
 
@@ -123,7 +123,7 @@ function renderCards() {
       event.stopPropagation();
       const productId = this.getAttribute('data-id');
       this.classList.toggle('active');
-      toggleWishlistItem(productId);
+      showAlert(`Product ${this.classList.contains('active') ? 'added to' : 'removed from'} wishlist.`);
     });
   });
 }
@@ -169,7 +169,7 @@ document.addEventListener('DOMContentLoaded', () => {
     })
     .catch(err => {
       console.error(err);
-      showError('Beim Laden des Produkts ist ein Fehler aufgetreten.');
+      showError('An error occured while loading the product details.');
     });
 });
 
@@ -181,8 +181,11 @@ function showError(message) {
 
 function renderProduct(product) {
   const container = document.getElementById('product-detail-container');
+  const playBtn = document.getElementById('play-audio-btn');
+  const audioEl = document.getElementById('product-audio');
+  const imageSrc = product.image;
+
   if (!container) return;
-  const imageSrc = product.image && product.image.trim() !== '' ? product.image : 'images/placeholder.png';
 
   container.innerHTML = `
     <div class="product-wrapper">
@@ -202,7 +205,7 @@ function renderProduct(product) {
                 </button>
                 <audio id="product-audio" src="${product.sound}"></audio>`
               : ''}
-            <a href="cart.html" class="see-more-btn" style="margin-top: 1rem; display: inline-block;">Add to Cart</a>
+          <button id="add-to-cart-btn" class="see-more-btn" style="margin-top: 1rem; display: inline-block;">Add to Cart</button>
           </div>
         </div>
       </div>
@@ -226,8 +229,6 @@ function renderProduct(product) {
     </form>
   `;
 
-  const playBtn = document.getElementById('play-audio-btn');
-  const audioEl = document.getElementById('product-audio');
   if (playBtn && audioEl) {
     playBtn.addEventListener('click', () => {
       if (!audioEl.paused) {
@@ -238,76 +239,61 @@ function renderProduct(product) {
     });
   }
 
- document.querySelectorAll('.wishlist-heart').forEach(heart => {
-    heart.addEventListener('click', function (event) {
-      event.stopPropagation();
-      const productId = this.getAttribute('data-id');
-      toggleWishlistItem(productId);
+  const addToCartBtn = document.getElementById('add-to-cart-btn');
+  if (addToCartBtn) {
+    addToCartBtn.addEventListener('click', () => {
+      let cartItems = JSON.parse(localStorage.getItem('cartItems')) || [];
+      cartItems.push(product.id);
+      localStorage.setItem('cartItems', JSON.stringify(cartItems));
+      showAlert(`Product "${product.name}" was added to cart`);
     });
-  });
-
-  document.querySelectorAll('.add-to-cart').forEach(button => {
-    button.addEventListener('click', function() {
-      const productId = this.getAttribute('data-id');
-      addToCart(productId);
-    });
-  });
-}
-
-function saveCart() {
-  localStorage.setItem('cartItems', JSON.stringify(cartItems));
-}
-
-function saveWishlist() {
-  localStorage.setItem('wishlistItems', JSON.stringify(wishlistItems));
-}
-
-function toggleWishlistItem(productId) {
-  const index = wishlistItems.indexOf(productId);
-  if (index === -1) {
-    wishlistItems.push(productId);
-  } else {
-    wishlistItems.splice(index, 1);
   }
-  saveWishlist();
-  updateWishlistHearts();
 }
 
-function updateWishlistHearts() {
-  document.querySelectorAll('.wishlist-heart').forEach(heart => {
-    const productId = heart.getAttribute('data-id');
-    heart.classList.toggle('active', wishlistItems.includes(productId));
-  });
+  function showAlert(message) {
+  const existing = document.querySelector('.alert-message');
+  if (existing) existing.remove();
+
+  const alert = document.createElement('div');
+  alert.className = 'alert-message';
+  alert.textContent = message;
+  document.body.appendChild(alert);
+
+  setTimeout(() => {
+    alert.classList.add('visible');
+  }, 100); 
+
+  setTimeout(() => {
+    alert.classList.remove('visible');
+    setTimeout(() => alert.remove(), 300); 
+  }, 3000);
 }
 
-function addToCart(productId) {
-  const product = motorcycles.find(p => p.id.toString() === productId.toString());
-  if (!product) return;
+document.addEventListener('DOMContentLoaded', () => {
 
-  const existingItem = cartItems.find(item => item.id === productId);
-  if (existingItem) {
-    existingItem.quantity += 1;
-  } else {
-    cartItems.push({
-      ...product,
-      quantity: 1
+  const newsletterForm = document.querySelector('#newsletter form');
+  if (newsletterForm) {
+    newsletterForm.addEventListener('submit', (e) => {
+      e.preventDefault();
+      showAlert(`Thank you, your subscription has been confirmed! You will receive an email soon.`);
+      newsletterForm.reset();
     });
   }
 
-  saveCart();
-  updateCartCount();
-}
-
-function updateCartCount() {
-  const totalItems = cartItems.reduce((sum, item) => sum + item.quantity, 0);
-  const cartCounts = document.querySelectorAll('.cart-count');
-  
-  cartCounts.forEach(count => {
-    if (totalItems > 0) {
-      count.textContent = totalItems;
-      count.style.display = 'inline-block';
-    } else {
-      count.style.display = 'none';
-    }
-  });
-}
+  const orderForm = document.getElementById('order-form');
+  if (orderForm) {
+    orderForm.addEventListener('submit', (e) => {
+      e.preventDefault();
+      showAlert(`Thank you for your order! We will contact you soon.`);
+      orderForm.reset();
+    });
+  }
+  const contactForm = document.querySelector('.contact-form');
+  if (contactForm) {
+    contactForm.addEventListener('submit', (e) => {
+      e.preventDefault(); 
+      showAlert(`Thank you for your message! We will get back to you as soon as possible.`);
+      contactForm.reset();
+    });
+  }
+});

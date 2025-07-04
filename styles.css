@@ -699,6 +699,28 @@ select {
   height: 24px;
 }
 
+.alert-message {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background: #333;
+  color: white;
+  padding: 12px 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.3s ease, transform 0.3s ease;
+  z-index: 1000;
+  font-family: sans-serif;
+  pointer-events: none;
+}
+
+.alert-message.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
 /* Mobile (Navigation) */
 @media (max-width: 768px) {
 
