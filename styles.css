@@ -431,11 +431,13 @@ footer {
 
 .filters-container {
   display: flex;
+  flex-wrap: nowrap; 
   gap: 0.8rem;
   overflow-x: auto;
   padding-bottom: 0.8rem;
   scrollbar-width: none; 
   -webkit-overflow-scrolling: touch;
+  justify-content: center; 
 }
 
 .filters-container::-webkit-scrollbar {
@@ -452,7 +454,7 @@ footer {
   border-radius: 8px;
   box-shadow: 0 1px 3px rgba(0,0,0,0.08);
   border: 1px solid #eaeaea;
-  min-width: 150px;
+  min-width: 130px; 
 }
 
 .filter-group label {
@@ -685,8 +687,8 @@ select {
 
 .back-button {
   position: absolute;
-  left: 1rem;
-  top: 50%;
+  left: 2rem;
+  top: 28%;
   transform: translateY(-50%);
   padding: 0.5rem;
   z-index: 10;
@@ -950,4 +952,13 @@ select {
   .product-content img {
     max-width: 400px;
   }
+
+  .back-button {
+  position: absolute;
+  left: 5rem;
+  top: 50%;
+  transform: translateY(-50%);
+  padding: 0.5rem;
+  z-index: 10;
+}
 }

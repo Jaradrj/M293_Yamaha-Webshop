@@ -8,7 +8,7 @@
 </head>
 <body>
   <header>
-  <img src="images/logo.png" alt="Logo" class="logo" />
+  <img src="images/logo.png" alt="Logo" class="logo" onclick="window.location.href='index.html';" />
   <div class="header-right">
     <a href="#newsletter"><img src="images/bell.svg" alt="Notifications" class="icon" /></a>
     <a href="cart.html"><img src="images/cart.svg" alt="Cart" class="icon" /></a>
@@ -41,11 +41,16 @@
   </div>
 </section>
   <section class="new_products" id="new-products">
-   <h2>Hot Products</h2>
-    <div class="new_products-grid">
+  <h2>Hot Products</h2>
+  <div class="new_products-grid"></div>
+  <template id="hot-product-template">
+    <div class="new_products-card" onclick="window.location.href='product.html?id=' + this.dataset.id">
+      <img src="" alt="" />
+      <h3></h3>
     </div>
-   <a href="products.html" class="see-more-btn">See More</a>
-  </section>
+  </template>
+  <a href="products.html" class="see-more-btn">See More</a>
+</section>
   <section class="newsletter" id="newsletter">
     <h2>Subscribe to Newsletter</h2>
     <form>
